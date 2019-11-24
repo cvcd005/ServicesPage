@@ -1,0 +1,75 @@
+$modalBgColor:#FFFFFF;
+$borderInput:#EAEAEA;
+$borderInputActive: #B8FFEC;
+$formTextColor: #7E7E82;
+$formLinkColor: #FF3E79;
+
+.modal{
+	width:440px;
+	position:absolute;
+	z-index:3;
+	right:10px;
+	top:10px;
+	height:100vh;
+	min-height:676px;
+	background: $modalBgColor;
+	padding-left:32px;
+	padding-right:32px;
+	padding-top:32px;
+	box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+
+	&__title{
+		font-size: 24px;
+		letter-spacing: -0.6px;
+	}
+}
+
+.form{
+	&__wrapper{
+		display:flex;
+		flex-direction:column;
+		justify-content: space-around;
+	}
+	&__input--style{
+		outline:none;
+		border: 1px solid $borderInput;
+		border-radius: 8px;
+		height:50px;
+		margin-bottom: 16px;
+		padding-left:16px;
+	}
+	&__input_style:hover, 
+	&__input_style:focus{
+	border: 2px solid $borderInputActive;
+	}
+	&__message{
+		height:110px;
+		padding-top:16px;
+	}
+	&__text{
+		font-size: 14px;
+		line-height: 16px;
+		color:$formTextColor;
+	}
+	&__submit{
+		align-self: flex-end;
+	}
+  &__link{
+		color:$formLinkColor;
+	}
+}
+.btn--close-form{
+	position:absolute;
+	right:480px;
+}
+
+/*изменения для телефона*/
+@media screen and  (max-width: 651px){
+	.btn--close-form{
+		position:relative;
+		right:1px;
+	}
+	.modal{
+		width:320px;
+	}
+}

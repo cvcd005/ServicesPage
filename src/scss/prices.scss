@@ -1,0 +1,63 @@
+$priceHeaderColor: #7E7E82;
+$rowHeadBg: #F8F8F8;
+$rowBg: #FFFFFF;
+$borderBotomColor:#EAEAEA;
+
+
+.prices{
+	margin-bottom: 50px;
+
+  &__header{
+    background: linear-gradient(to right, $bgColor 0, #FFFFFF 98%);
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: $priceHeaderColor;
+    height:55px;
+    padding-left:30px;
+    padding-top:16px;
+    width:100%;
+  }
+
+  &__table{
+    margin-left:30px;
+    border-collapse: collapse;
+    margin-bottom:32px;
+    width:90%;
+    max-width:970px;
+    
+    &-head &-row{
+      color: $priceHeaderColor;
+      text-align:left;
+      background:$rowHeadBg;
+    }
+    &-row{
+      height:60px;
+      background:$rowBg;
+    }
+    &-body &-row{
+      border-bottom: 1px solid $borderBotomColor;
+    }
+    &-cell{
+      padding:20px;
+    }
+    &-cell--hide-text{
+      display:none;
+      color: $priceHeaderColor;
+    }
+    &-caption{
+      caption-side:bottom;
+    }
+  }
+  &__text{
+    max-width:420px;
+    min-width:280px;
+    width:60%;
+    margin-left:30px;
+  }
+  &__link{
+    margin-left:30px;
+    margin-top:16px;
+    font-weight: bold;
+  }
+}

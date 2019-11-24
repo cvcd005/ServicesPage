@@ -1,0 +1,51 @@
+$repairsHeaderColor: #7E7E82;
+$repairsBgColor: #FFFFFF;
+$repairsBorder: #EAEAEA;
+$repairsBorderActive: red;
+
+.repairs{
+  margin-bottom:50px;
+  &__header{
+    background: linear-gradient(to right, #F8F8F8 0, #FFFFFF 98%);
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: $repairsHeaderColor;
+    height:55px;
+    padding-left:30px;
+    padding-top:16px;
+  }
+  &__list{
+    padding-left:14px;
+    height:170px;
+    overflow: hidden;
+    position:relative;
+  }
+  &__list-wrap{
+    flex-wrap:wrap;
+    /*display:flex;
+    margin-top:25px;
+    align-content:space-around;*/
+  }
+  &__brands{
+    min-width:230px;
+    height:72px;
+    background: $repairsBgColor;
+    border: 1px solid $repairsBorder;
+    border-radius: 6px;
+    margin-bottom:16px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left:16px;
+    margin-left:16px;
+  }
+  &__brands:hover,
+  &__brands:focus{
+    border:2px solid $repairsBorderActive;
+  }
+}
+.swiper-slide{
+  width:25%;
+  max-width:230px;
+}

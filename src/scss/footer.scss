@@ -1,0 +1,14 @@
+$footerTextColor: #7E7E82;
+
+.footer{
+  &__wrapper{
+    display:flex;
+    align-items: baseline;
+    padding-left:35px;
+    justify-content: space-between;
+  }
+  &__item{
+    width:30%;
+    color: $footerTextColor;
+  }
+}

@@ -1,0 +1,118 @@
+$circleColor: #FF3E79;
+
+.btn{
+  background-color:transparent;
+  border:none;
+  cursor:pointer;
+  margin:0;
+  padding:0;
+
+  &--animate:hover,
+  &--animate:focus{
+    transition: filter 0.5s ;
+    filter:opacity(0.5);
+  }
+  &__close-img{
+    background-image: url("../img/close.png");
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+  &__find-img{
+    background-image: url("../img/search.png");
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+  &__call-img{
+    background-image: url("../img/call.png");
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+  &__chat-img{
+    background-image: url("../img/chat.png");
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+  &__profile-img{
+    background-image: url("../img/profile.png");
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+  &__burger-img{
+    background-image: url("../img/burger.png");
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+  &__status-img{
+    background-image: url("../img/status.svg");
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+  &__order-img{
+    background-image: url("../img/order.svg");
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+  &--moreRead{
+    font-size:16px;
+    line-height: 24px;
+    font-weight:bold;
+    cursor:pointer;
+  }
+  &--elipse{
+    background:$circleColor;
+    color:white;
+    border-radius:16px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    width:119px;
+    height:32px;
+  }
+}
+.moreRead-icon{
+  display:inline-block;
+  background-image:url("../img/big.svg");
+  background-repeat: no-repeat;
+  background-position:center;
+  margin-right:10px;
+  width:1em;
+  height:1em;
+}
+.smallRead-icon{
+  display:inline-block;
+  background-image:url("../img/small.svg");
+  background-repeat: no-repeat;
+  background-position:center;
+  margin-right:10px;
+  width:1em;
+  height:1em;
+}
+.white-arrow{
+  display:inline-block;
+  background-image:url("../img/white-arrow.png");
+  background-repeat: no-repeat;
+  background-position:center;
+  margin-right:10px;
+  width:1em;
+  height:1em;
+}
+.circle{
+  width:40px;
+  height:40px;
+  vertical-align:middle;
+  border-radius:50%;
+  display:inline-block;
+  background-color:$circleColor;
+}
+.light-circle{
+  width:40px;
+  height:40px;
+  vertical-align:middle;
+  border-radius:50%;
+  display:inline-block;
+  border: 2px solid $circleColor;
+  background-image:url("../img/arrow.svg");
+  background-position:center;
+  background-repeat: no-repeat;
+  margin-right:16px;
+}

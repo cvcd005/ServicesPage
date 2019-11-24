@@ -1,0 +1,80 @@
+$menuBg:#FFFFFF;
+$menuBorder:#B8FFEC;
+$menuActiveColor: #7E7E82;
+
+.menu{
+  width:310px;
+  background:$menuBg;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  height:100%;
+  min-height:800px;
+
+  &__header{
+    padding-top:20px;
+    margin-bottom:57px;
+    display:flex;
+    justify-content:space-around;
+  }
+  &__wrapper{
+    display:flex;
+    flex-wrap:wrap;
+    max-height:800px;
+    height:80%;
+  }
+  &__main{
+    align-self:flex-start;
+  }
+  &__list{
+    list-style:none;
+    padding:0;
+    margin:0;
+  }
+  &__item{
+    padding-left:24px;
+    margin-bottom:32px;
+    cursor:pointer;
+  }
+  &__footer{
+    padding-left:25px;
+    align-self:flex-end;
+  }
+  &__contact{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    min-height:120px;
+  }
+  &__footer-btn{
+    margin-bottom:15px;
+  }
+  &__mail{
+    text-decoration: none;
+    color:#1B1C21;
+  }
+  &__phone{
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    font-weight:bold;
+    margin-top:12px;
+    text-decoration: none;
+    color:$textColor;
+  }
+  &__lang{
+    margin-top:40px;
+  }
+}
+
+.logo{
+  width:97px;
+  height:51px;
+}
+.active-border{
+  border-left:4px solid $menuBorder;
+  color: $menuActiveColor;
+}
+.active{
+  color: $menuActiveColor;
+}

@@ -1,0 +1,20 @@
+.services{
+	margin-bottom:50px;
+  &__content{
+    padding-left:34px;
+    display:flex;
+    justify-content:space-between;
+  }
+  &__text-wrapper{
+    width:45%;
+    display:flex;
+    height:200px;
+    overflow: hidden;
+    flex-wrap:wrap;
+  }
+  &__img{
+    width:45%;
+    height:45%;
+  }
+}
+
