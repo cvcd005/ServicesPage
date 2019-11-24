@@ -5,7 +5,7 @@ import Swiper from 'swiper/js/swiper.min.js';
 /*слайдер */ 
 window.onload = function() {
 	
-	if(window.innerWidth < 768) {
+	if(window.innerWidth < 651) {
 		let tbody = document.querySelector('.prices__table-body'); 
 		tbody.classList.add('swiper-wrapper');
 		tbody.style.flexWrap = "nowrap";
@@ -25,7 +25,7 @@ const bindSliders = () => {
     direction: 'horizontal',
   };
 
-	if(window.innerWidth < 768) {
+	if(window.innerWidth < 651) {
     let repairsNavSlider = new Swiper(repairsNav, Object.assign({}, sliderConf, {
       pagination: {
         el: '.repairs__pagination',
@@ -33,7 +33,7 @@ const bindSliders = () => {
       }
     }));
 	}
-  if(window.innerWidth < 768) {
+  if(window.innerWidth < 651) {
     let gadjetsNavSlider = new Swiper(gadjetsNav, Object.assign({}, sliderConf, {
       pagination: {
         el: '.gadjets__pagination',
@@ -41,7 +41,7 @@ const bindSliders = () => {
       }
     }));
 	}
-	if(window.innerWidth < 768) {
+	if(window.innerWidth < 651) {
 		let pricesNavSlider = new Swiper(pricesNav, Object.assign({}, sliderConf, {
       pagination: {
         el: '.prices__pagination',
