@@ -41,5 +41,10 @@
     "start": "webpack-dev-server --mode development --open",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^5.2.1"
   }
 }
