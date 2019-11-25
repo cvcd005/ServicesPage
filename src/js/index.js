@@ -82,19 +82,7 @@ const openListOverflow = (btn, listName, sizeBig, sizeSmall, spanBegin, spanEnd)
 const btnServices = document.querySelector('.btn--services');
 btnServices.addEventListener('click', function(){
 	openListOverflow(btnServices, '.services__text-wrapper', 'auto', '200px', 'Читать далее', 'Свернуть');
-		/*костыль для текста*/
-		/*let container = document.querySelector('.services__content');
-		if(btnServices.classList.contains('canSmall')){
-			if(window.innerWidth < 651){
-				container.style.height = 'auto'; 
-			} else {
-				container.style.height = '500px'; 
-			}
-		} else if(btnServices.classList.contains('canBig')){
-			container.style.height = '270px';
-		};*/
-		/*openListOverflow(btnServices, '.text-wrapper', 'auto', '200px', 'Читать далее', 'Свернуть');
-*/
+	
 });
 
 const btnRepairs = document.querySelector('.btn-repairs');
