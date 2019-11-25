@@ -1,11 +1,23 @@
 .services{
-	margin-bottom:50px;
+  margin-bottom:30px;
+
   &__content{
     padding-left:34px;
-    display:flex;
-    justify-content:space-between;
   }
+  &__img{
+    float:right;
+    width:50%;
+    margin-left:15px;
+  }
+  
+    /*display:flex;
+    flex-wrap:wrap;
+    flex-direction:column;
+    height:270px;
+  }
+
   &__text-wrapper{
+    display:flex;
     width:45%;
     display:flex;
     height:200px;
@@ -14,7 +26,22 @@
   }
   &__img{
     width:45%;
-    height:45%;
+    height:auto;
   }
+}*/
+}
+.services__text-wrapper{
+  height:205px;
+  overflow:hidden;
 }
 
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.btn--services{
+  margin-top:10px;
+  width:150px;
+}

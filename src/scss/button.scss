@@ -68,6 +68,12 @@ $circleColor: #FF3E79;
     width:119px;
     height:32px;
   }
+  &--order,
+  &--header{
+    font-size: 16px;
+    font-weight: bold;
+  }
+
 }
 .moreRead-icon{
   display:inline-block;

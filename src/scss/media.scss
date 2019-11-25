@@ -77,6 +77,8 @@
   .nav__item{
     min-width:230px;
   }
+
+ 
 }
 
 
@@ -124,7 +126,7 @@
   /*текст хедера статьи в колонки*/
   .services{
     &__content{
-      flex-direction: column;
+      height:auto;
     }
     &__text-wrapper,
     &__img{

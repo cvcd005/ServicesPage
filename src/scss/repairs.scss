@@ -28,7 +28,7 @@ $repairsBorderActive: red;
     align-content:space-around;*/
   }
   &__brands{
-    min-width:230px;
+    width:230px;
     height:72px;
     background: $repairsBgColor;
     border: 1px solid $repairsBorder;
@@ -48,4 +48,5 @@ $repairsBorderActive: red;
 .swiper-slide{
   width:25%;
   max-width:230px;
+  min-width:200px;
 }
