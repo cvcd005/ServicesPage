@@ -102,10 +102,10 @@ btnGadjets.addEventListener('click', function(){
 const overlay = document.querySelector('.overlay');
 
 /*открыть бургер меню*/
-const burgerBtn = document.querySelector('.btn--burger');
+const burgerBtn = document.querySelector('.btn-primery--burger');
 burgerBtn.addEventListener('click', function(){
 	let popup = document.querySelector('.menu');
-	popup.classList.remove('menu_visibility');
+	popup.style.display='block';
 	popup.style.zIndex='2';
 	overlay.classList.remove('hide');
 });
@@ -113,15 +113,15 @@ burgerBtn.addEventListener('click', function(){
 const closeBtn = document.querySelector('.btn--close-burger');
 closeBtn.addEventListener('click', function(){
 	let popup = document.querySelector('.menu');
-	popup.classList.add('menu_visibility');
 	popup.style.zIndex='0';
+	popup.style.display='none';
 	overlay.classList.add('hide');
 });
 
 
 /*кнопки заказать звонок*/
-const listBtnCall = document.querySelectorAll('.btn--call');
-const listBtnChat = document.querySelectorAll('.btn--chat');
+const listBtnCall = document.querySelectorAll('.btn-primery--call');
+const listBtnChat = document.querySelectorAll('.btn-primery--chat');
 
 const findAllButton = (list, selectorName) => {
 	for(let i=0,l=list.length;i<l;i++){
@@ -129,7 +129,7 @@ const findAllButton = (list, selectorName) => {
 		let popup = document.querySelector(selectorName);
 		popup.classList.remove('hide');
 		overlay.classList.remove('hide');
-		overlay.style.zIndex='2';
+		overlay.style.zIndex='3';
 		/*блокируем body для модалок*/
 		let container = document.querySelector('.container');
 		container.style.height="100vh";
@@ -143,7 +143,7 @@ findAllButton(listBtnChat, '.modal-write');
 
 
 /*закрытие модалки звонок и письмо*/
-const closeBtnList = document.querySelectorAll('.btn--close-form');
+const closeBtnList = document.querySelectorAll('.btn-primery--close-form');
 for(let i=0,l=closeBtnList.length;i<l;i++){
 	closeBtnList[i].addEventListener('click', function(){
 		let popupPhone = document.querySelector('.modal-phone');

@@ -3,12 +3,26 @@ $footerTextColor: #7E7E82;
 .footer{
   &__wrapper{
     display:flex;
-    align-items: baseline;
-    padding-left:35px;
-    justify-content: space-between;
+    flex-direction:column;
+    text-align:center;
   }
   &__item{
-    width:30%;
+    width:100%;
     color: $footerTextColor;
+  }
+}
+
+@media screen and  (min-width: 768px) {
+  .footer{
+    padding-left:35px;
+    &__wrapper{
+      align-items: baseline;
+      justify-content: space-between;
+      flex-direction:row;
+      text-align:left;
+    }
+    &__item{
+      width:30%;
+    }
   }
 }

@@ -70,12 +70,13 @@ $formLinkColor: #FF3E79;
 	}
 }
 
-.btn--close-form{
+.btn-primery--close-form{
 	position:relative;
 	right:1px;
 }
+
 @media screen and  (min-width: 321px){
-	.btn--close-form{
+	.btn-primery--close-form{
 		position:absolute;
 		left:-50px;
 	}

@@ -7,83 +7,67 @@
     <title></title>
   </head>
   <body class="container">
-    <header class="header">
-
+     
+    <div class="menu">
+          <div class="menu__header">
+            <button type="button" class="btn btn-primery btn-primery--close btn--close-burger"></button>
+            <img class="logo" src="img/group.svg" alt="Логотип компании CPS">
+            <button type="button" class="btn btn-primery btn-primery--find"></button>
+          </div>
+          <div class="menu__wrapper">
+            <nav class="m-nav">
+              <ul class="m-nav__list">
+                <li class="m-nav__item">Ремонт техники</li>
+                <li class="m-nav__item active-border">Услуги и сервисы</li>
+                <li class="m-nav__item">Корпоративным клиентам</li>
+                <li class="m-nav__item">Продавцам техники</li>
+                <li class="m-nav__item">Партнерам</li>
+                <li class="m-nav__item">Производителям</li>
+                <li class="m-nav__item">Наши сервисные центры</li>
+                <li class="m-nav__item">Контакты</li>
+              </ul>
+            </nav>
+            <div class="m-contact">
+              <div class="contact-btn">
+                  <button type="button" class="btn btn-primery btn-primery--call"></button>
+                  <button type="button" class="btn btn-primery btn-primery--chat"></button>
+                  <button type="button" class="btn btn-primery btn-primery--profile"></button>
+              </div>
+              <a href="mailto:mail@cps.com" class="m-contact__link ">mail@cps.com</a>
+              <a href="tel:+78008908900" class="m-contact__phone">8 800 890 8900</a>
+            </div>
+          </div>
+          <div class="lang-change">
+            <button type="button" class="btn btnRu active">RU</button>
+            <button type="button" class="btn btnEn">EN</button>
+            <button type="button" class="btn btnCH">CH</button>
+          </div>
+    </div>    
+      
+    <div class="second-part">
+    <main class="main">
       <div class="menu-tablet">
-        <button class="btn btn--animate btn--burger" type="button"><div class="circle btn__burger-img"></div></button>
+        <button type="button" class="btn btn-primery btn-primery--burger"></button>
         <div class="menu-tablet__main">
           <img class="logo" src="img/group.svg" alt="Логотип компании CPS">
-          <div class="menu-tablet__hide-btn">
-            <button type="button" class="btn btn--animate margin-right btn--call"><div class="circle btn__call-img"></div>
-            </button>
-            <button type="button" class="btn btn--animate margin-right btn--chat"><div class="circle btn__chat-img"></div>
-            </button>
-            <button type="button" class="btn btn--animate btn--profile"><div class="circle btn__profile-img"></div>
-            </button>
+          <div class="contact-btn">
+            <button type="button" class="btn btn-primery btn-primery--call"></button>
+            <button type="button" class="btn btn-primery btn-primery--chat"></button>
+            <button type="button" class="btn btn-primery btn-primery--profile"></button>
           </div>
         </div>
         <div class="menu-tablet__btn">
-            <button type="button" class="btn btn--animate btn--order margin-right"><div class="circle btn__order-img"></div>
-            </button>
-            <button type="button" class="btn btn--animate btn--status"><div class="circle btn__status-img"></div></button>
-        </div>
-      </div>
-           
-      <div class="menu menu_visibility">
-        <div class="menu__header">
-          <button type="button" class="btn btn--animate menu-hide btn--close btn--close-burger">
-            <div class="circle btn__close-img"></div>
-          </button>
-          <img class="logo" src="img/group.svg" alt="Логотип компании CPS">
-          <button type="button" class="btn btn--animate btn--find">
-            <div class="circle btn__find-img"></div>
-          </button>
-        </div>
-        <div class="menu__wrapper">
-          <nav class="menu__main">
-            <ul class="menu__list">
-              <li class="menu__item active-border">Ремонт техники</li>
-              <li class="menu__item">Услуги и сервисы</li>
-              <li class="menu__item">Корпоративным клиентам</li>
-              <li class="menu__item">Продавцам техники</li>
-              <li class="menu__item">Партнерам</li>
-              <li class="menu__item">Производителям</li>
-              <li class="menu__item">Наши сервисные центры</li>
-              <li class="menu__item">Контакты</li>
-            </ul>
-          </nav>
-          <div class="menu__footer">
-            <div class="menu__contact">
-              <div class="menu__footer-btn">
-                <button type="button" class="btn btn--animate margin-right btn--call"><div class="circle btn__call-img"></div>
-                </button>
-                <button type="button" class="btn btn--animate margin-right btn--chat"><div class="circle btn__chat-img"></div>
-                </button>
-                <button type="button" class="btn btn--animate btn--profile"><div class="circle btn__profile-img"></div>
-                </button>
-              </div>
-              <a href="mailto:mail@cps.com" class="menu__mail">mail@cps.com</a>
-              <a href="tel:+78008908900" class="menu__phone">8 800 890 8900</a>
-            </div>
-            <div class="menu__lang">
-              <button type="button" class="btn btnRu active">RU</button>
-              <button type="button" class="btn btnEn">EN</button>
-              <button type="button" class="btn btnCH">CH</button>
-            </div>
-          </div>
+            <button type="button" class="btn btn-primery btn-primery--order margin-right"></button>
+            <button type="button" class="btn btn-primery btn-primery--status"></button>
         </div>
       </div>
 
-    </header>
-
-    <main class="main">
-      
       <header class="header-page">
         <h1 class="header-page__title">Услуги и сервисы</h1>
-        <div class="header-page__button-list">
-          <button type="button" class="btn btn--animate btn--order">Оставить заявку<div class="circle btn__order-img  margin-left"></div>
+        <div class="header-page__btn">
+          <button type="button" class="btn btn-text">Оставить заявку<div class="circle order-icon margin-left"></div>
           </button>
-          <button type="button" class="btn btn--animate btn--header">Статус ремонта<div class="circle btn__status-img margin-left"></div></button>
+          <button type="button" class="btn btn-text">Статус ремонта<div class="circle status-icon margin-left"></div></button>
         </div>
       </header>
 
@@ -188,7 +172,7 @@
               <th class="prices__table-cell"></th>
             </tr>
           </thead>
-          <tbody class="prices__table-body ">
+          <tbody class="prices__table-body">
             <tr class="prices__table-row swiper-slide">
               <td class="prices__table-cell"><p><span class="prices__table-cell--hide-text">Ремонтные услуги<br></span>Диагностика</p></td>
               <td class="prices__table-cell"><p><span class="prices__table-cell--hide-text">Цена<br></span>Бесплатно</p></td>
@@ -245,30 +229,27 @@
         <p class="footer__item">Информация, размещенная на данной странице, не является публичной офертой</p>
       </div>
     </footer>
-
-
-    <div class="overlay hide"></div>
-    <div class="modal modal-write hide">
-      <button type="button" class="btn btn--animate btn--close btn--close-form">
-        <div class="circle btn__close-img"></div>
-      </button>
-      <h3 class="modal__title">Обратная связь</h3>
-      <form class="form">
-        <div class="form__wrapper">
-          <input type="text" name="name" placeholder="Имя" class="form__name form__input--style ">
-          <input type="tel" id="phone" name="phone" placeholder="Телефон" class="form__phone form__input--style">
-          <input type="email" id="email" name="email" placeholder="Электронная почта" class="form__email form__input--style">
-          <textarea placeholder="Cообщение" class="form__input--style form__message">
-          </textarea>
-          <p class="form__text">Нажимая "отправить", вы даете согласие на <a href="#" class="form__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="form__link">политикой конфиденциальности</a></p>
-          <button type="submit" class="form__submit btn btn--animate btn--elipse">Отправить<div class="white-arrow"></button>
-        </div>
-      </form>
   </div>
-  
+
+  <div class="overlay hide"></div>
+  <div class="modal modal-write hide">
+    <button type="button" class="btn btn-primery btn-primery--close btn-primery--close-form" dat-id='close-form'>
+    </button>
+    <h3 class="modal__title">Обратная связь</h3>
+    <form class="form">
+      <div class="form__wrapper">
+        <input type="text" name="name" placeholder="Имя" class="form__name form__input--style ">
+        <input type="tel" id="phone" name="phone" placeholder="Телефон" class="form__phone form__input--style">
+        <input type="email" id="email" name="email" placeholder="Электронная почта" class="form__email form__input--style">
+        <textarea placeholder="Cообщение" class="form__input--style form__message">
+        </textarea>
+        <p class="form__text">Нажимая "отправить", вы даете согласие на <a href="#" class="form__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="form__link">политикой конфиденциальности</a></p>
+        <button type="submit" class="form__submit btn btn--animate btn--elipse">Отправить<div class="white-arrow"></button>
+      </div>
+     </form>
+  </div>
   <div class="modal modal-phone hide">
-    <button type="button" class="btn btn--animate btn--close-form">
-        <div class="circle btn__close-img"></div>
+    <button type="button" class="btn btn-primery btn-primery--close btn-primery--close-form">
     </button>
     <h3 class="modal-title">Заказать звонок</h3>
     <form class="form">

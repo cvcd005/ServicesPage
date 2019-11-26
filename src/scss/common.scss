@@ -12,43 +12,26 @@ body{
   line-height:20px;
   font-size: 14px;
 }
+a{
+  color:inherit;
+  text-decoration: none;
+}
 .container{
   padding:0;
   margin:0 auto 0 auto;
   background:$bgColor;
   color:$textColor;
-  /*max-width:1440px;
-  max-height: 2200px;*/
   max-width:1440px;
-  height:2600px;
+  min-width:320px;
   display: flex;
-  flex-direction:column;
-  -ms-flex-wrap: wrap !important;/*for ie11*/
-  flex-wrap:wrap;
 }
-.header{
-  width:310px;
-  height: 100%;
-}
-.main{
+.second-part{
   max-width:1130px;
-  width:100%;
-  height: auto;
-}
-.footer{
-  max-width:1130px;
-  width:100%;
-  height: 90px;
-  padding-top:32px;
-}
-a{
-  color:inherit;
-  text-decoration: none;
+  width:100vw;
 }
 .hide{
   display: none;
 }
-
 .top-border{
   border-top:1px solid #D9FFF5;
 }

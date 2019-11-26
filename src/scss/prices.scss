@@ -6,7 +6,7 @@ $borderBotomColor:#EAEAEA;
 
 .prices{
 	margin-bottom: 50px;
-
+  padding-left:32px;
   &__header{
     background: linear-gradient(to right, $bgColor 0, #FFFFFF 98%);
     font-size: 16px;
@@ -20,12 +20,10 @@ $borderBotomColor:#EAEAEA;
   }
 
   &__table{
-    margin-left:30px;
     border-collapse: collapse;
     margin-bottom:32px;
-    width:90%;
-    max-width:970px;
-    
+    margin-right:20px;
+    width:95%;
     &-head &-row{
       color: $priceHeaderColor;
       text-align:left;

@@ -1,12 +1,6 @@
 /*десктоп*/
 @media screen and (min-width: 1024px) { 
-  /*убираем бургер меню и кнопку закрытия меню для десктоп версии*/
-  .menu-tablet{
-    display:none;
-  }
-  .menu-hide{
-    display:none;
-  }
+  
   .swiper-pagination {
     display: none;
   }
@@ -14,70 +8,14 @@
 
 /*планшет*/
 @media screen and (max-width: 1023px) { 
-  .container{
-    height:100%;
-    width:100%;
-  }
-  /*Убираем десктоп меню показываем меню для планшета*/
-  .header{
-    height:90px;
-    width:100%;
-  }
-  .main{
-    width:100%;
-  }
-  .footer{
-    padding-top:16px;
-    width:100%;
-    height:150px;
-  }
-  .menu-tablet{
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    height:100%;
-    padding-left:35px;
-  } 
-  .menu-tablet__main{
-    padding-left:20px;
-    padding-right:20px;
-    border-left:2px solid #EAEAEA;
-    border-radius:1px;
-    border-right:2px solid #EAEAEA;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    width:550px;
-  }
-  .menu-tablet__btn{
-    width:130px;
-    display:flex;
-    justify-content: center;
-  }
-  .menu{
-    position:absolute;
-    height:100vh;
-    top:0;
-    box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
-  }
-  .menu_visibility{
-    display:none;
-  }
+ 
+  
+  
+  
 
-  /*убираем лишние кнопки страницы*/
-  .header-page__button-list{
-    display:none;
-  }
 
   /*обрезаем навигацию страницы под размер экрана*/
-  .nav__list{
-    flex-wrap:nowrap;
-    overflow: hidden;
-  }
-  .nav__item{
-    min-width:230px;
-  }
-
+ 
  
 }
 
@@ -86,41 +24,9 @@
 /*телефон */
 @media screen and  (max-width: 651px) {
   
-
-
-  /*убираем лишние кнопки меню*/
-  .container{
-    min-width:320px;
-  }
-  .menu-tablet{
-    padding-left:0;
-  }
-  .menu-tablet__hide-btn{
-    display:none;
-  }
-  .menu-tablet__main{
-    width:40%;
-    border-left:none;
-  }
-  .btn--burger{
-    width:20%;
-  }
-  .menu-tablet__btn{
-    width:30%;
-  }
   .btn-repairs,
   .btn-gadjets{
     display:none;
-  }
-
-  /*текст футера в колонки*/
-  .footer__wrapper{
-    flex-direction:column;
-    padding-left:0;
-    text-align:center;
-  }
-  .footer__item{
-    width:100%;
   }
 
   /*текст хедера статьи в колонки*/
@@ -146,14 +52,6 @@
       }
       
       /*боди таблицы флекс*/
-      
-      /*&-body{
-        width:90vw;
-        display: flex;
-        flex-wrap:nowrap;
-        overflow: hidden;
-        position:relative;
-      }*/
       /*из строки таблицы делаем флекс контейнер и делаем такую раскладку*/
       /*________
       |________|

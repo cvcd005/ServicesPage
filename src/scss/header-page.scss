@@ -17,22 +17,32 @@ $linkColor:#7E7E82;
     padding-left:30px;
     font-weight:900;
   }
-  &__button-list{
+  &__btn{
+    display:none;
+  }
+}
+@media screen and (min-width: 1024px) { 
+  .header-page__btn{
     display:flex;
     justify-content:space-between;
     width:400px;
   }
 }
+
+
+
 .nav{
   &__list {
     list-style:none;
     display:flex;
-    flex-wrap:wrap;
+    flex-wrap:nowrap;
     font-size:16px;
     line-height:24px;
+    overflow:hidden;
   }
   &__item{
     width:20%;
+    min-width:210px;
     height:40px;
     border: 2px solid transparent;
     border-radius: 6px;
@@ -52,4 +62,57 @@ $linkColor:#7E7E82;
     padding-top:5px;
     text-align:center;
   } 
+}
+@media screen and (min-width: 1024px) { 
+  .nav__list{
+    flex-wrap:wrap;
+    overflow: visible;
+  }
+}
+
+
+
+.menu-tablet{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:24px 0 24px 30px;
+  &__main{
+    flex-grow:1;
+    max-width:550px;
+    padding-left:20px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__btn{
+    display:flex;
+    justify-content: center;
+    border-left:2px solid #EAEAEA;
+    padding-left:10px;
+    max-width:130px;
+    width:40%;
+  }
+}
+@media screen and (min-width: 768px){
+  .menu-tablet{
+    &__main{
+      border-left:2px solid #EAEAEA;
+      border-radius:1px;
+    }
+  }
+}
+@media screen and (min-width: 1024px) { 
+  .menu-tablet{
+    display:none;
+  }
+}
+
+.contact-btn{
+  display:none;
+}
+@media screen and (min-width: 768px){
+  .contact-btn{
+    display:flex;
+  }
 }

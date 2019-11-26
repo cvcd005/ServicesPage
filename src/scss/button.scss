@@ -6,52 +6,6 @@ $circleColor: #FF3E79;
   cursor:pointer;
   margin:0;
   padding:0;
-
-  &--animate:hover,
-  &--animate:focus{
-    transition: filter 0.5s ;
-    filter:opacity(0.5);
-  }
-  &__close-img{
-    background-image: url("../img/close.png");
-    background-repeat:no-repeat;
-    background-position:center;
-  }
-  &__find-img{
-    background-image: url("../img/search.png");
-    background-repeat:no-repeat;
-    background-position:center;
-  }
-  &__call-img{
-    background-image: url("../img/call.png");
-    background-repeat:no-repeat;
-    background-position:center;
-  }
-  &__chat-img{
-    background-image: url("../img/chat.png");
-    background-repeat:no-repeat;
-    background-position:center;
-  }
-  &__profile-img{
-    background-image: url("../img/profile.png");
-    background-repeat:no-repeat;
-    background-position:center;
-  }
-  &__burger-img{
-    background-image: url("../img/burger.png");
-    background-repeat:no-repeat;
-    background-position:center;
-  }
-  &__status-img{
-    background-image: url("../img/status.svg");
-    background-repeat:no-repeat;
-    background-position:center;
-  }
-  &__order-img{
-    background-image: url("../img/order.svg");
-    background-repeat:no-repeat;
-    background-position:center;
-  }
   &--moreRead{
     font-size:16px;
     line-height: 24px;
@@ -73,7 +27,65 @@ $circleColor: #FF3E79;
     font-size: 16px;
     font-weight: bold;
   }
+}
 
+.btn-primery{
+  border-radius:50%;
+	width:40px;
+	height:40px;
+  background:#FF3E79;
+  
+  &--close{
+    background-image: url("../img/close.png");
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+  &--find{
+    background-image: url("../img/search.png");
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+  &--profile{
+    background-image: url("../img/profile.png");
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+  &--call{
+    background-image: url("../img/call.png");
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+  &--chat{
+    background-image: url("../img/chat.png");
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+  &--burger{
+    background-image: url("../img/burger.png");
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+  &--status{
+    background-image: url("../img/status.svg");
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+  &--order{
+    background-image: url("../img/order.svg");
+    background-repeat:no-repeat;
+    background-position:center;
+  }
+}
+.btn:hover,
+.btn:focus{
+  transition: filter 0.5s ;
+  filter:opacity(0.5);
+}
+
+.btn-text{
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
 }
 .moreRead-icon{
   display:inline-block;
@@ -122,3 +134,15 @@ $circleColor: #FF3E79;
   background-repeat: no-repeat;
   margin-right:16px;
 }
+.status-icon{
+  background-image: url("../img/status.svg");
+  background-repeat:no-repeat;
+  background-position:center;
+}
+.order-icon{
+  background-image: url("../img/order.svg");
+  background-repeat:no-repeat;
+  background-position:center;
+}
+
+
