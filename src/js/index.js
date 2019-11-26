@@ -1,5 +1,6 @@
 import '../scss/style.scss';
 import Swiper from 'swiper/js/swiper.min.js';
+import { brotliDecompressSync } from 'zlib';
 
 
 /*слайдер */ 
@@ -129,6 +130,10 @@ const findAllButton = (list, selectorName) => {
 		popup.classList.remove('hide');
 		overlay.classList.remove('hide');
 		overlay.style.zIndex='2';
+		/*блокируем body для модалок*/
+		let container = document.querySelector('.container');
+		container.style.height="100vh";
+		container.style.overflow='hidden';
 		})
 	};
 };
@@ -147,6 +152,10 @@ for(let i=0,l=closeBtnList.length;i<l;i++){
 		popup.classList.add('hide');
 		overlay.classList.add('hide');
 		overlay.style.zIndex='1';
+		let container = document.querySelector('.container');
+	/////////////////изменить параметр при смене способа раскладки
+		container.style.height="2600px";
+		container.style.overflow='visible';
 	})
 };
 
