@@ -26,64 +26,13 @@
   
   .btn-repairs,
   .btn-gadjets{
-    display:none;
+    /*display:none;*/
   }
 
-  /*текст хедера статьи в колонки*/
-  .services{
-    &__content{
-      height:auto;
-    }
-    &__text-wrapper,
-    &__img{
-      width:100%;
-    }
-  }
   
   /*таблица цен в блок*/
     /*убираем общий заголовк таблицы*/
-    .prices__table{
-      overflow:hidden;
-      position:relative;
-      height:220px;
-
-      &-head{
-        display:none;
-      }
-      
-      /*боди таблицы флекс*/
-      /*из строки таблицы делаем флекс контейнер и делаем такую раскладку*/
-      /*________
-      |________|
-      |________|
-      |___|____|
-      */
-      
-      &-row{
-        display: flex;
-        height:200px;
-        width:80%;
-        margin-right:16px;
-        flex-wrap:wrap;
-        padding-left:16px;
-        padding-right:16px;
-      }
-      &-cell{
-        padding:0;
-        width:100%;
-        height:33%;
-      }
-      &-cell:nth-child(3){
-        width:50%;
-      }
-      &-cell:last-child{
-        margin-top:20px;
-        width:50%;
-      }
-      &-cell--hide-text{
-        display:inline;
-      }
-    }
+    
     /*бренды обрезаем*/
     .repairs__list-wrap{
       flex-wrap:nowrap;
@@ -101,9 +50,9 @@
       height:200px;
       width:100vw;
     }
-    .swiper-slide{
+    /*.swiper-slide{
       width:80%;
-    }
+    }*/
 }
 
 

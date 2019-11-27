@@ -1,49 +1,47 @@
 import '../scss/style.scss';
 import Swiper from 'swiper/js/swiper.min.js';
-import { brotliDecompressSync } from 'zlib';
+/*import { brotliDecompressSync } from 'zlib';*/
 
 
 /*слайдер */ 
 window.onload = function() {
 	
-	if(window.innerWidth < 651) {
+	if(window.innerWidth < 768) {//костыль для таблицы
 		let tbody = document.querySelector('.prices__table-body'); 
 		tbody.classList.add('swiper-wrapper');
 		tbody.style.flexWrap = "nowrap";
-		tbody.style.width = "98vw";
 	}
 
 	bindSliders();
 }
 
 const bindSliders = () => {
-	let repairsNav = '.repairs__slider';
-	let gadjetsNav = '.gadjets__slider';
-	let pricesNav = '.prices__slider';
-
+	
 	let sliderConf = {
     slidesPerView: 'auto',
     direction: 'horizontal',
   };
 
-	if(window.innerWidth < 651) {
-    let repairsNavSlider = new Swiper(repairsNav, Object.assign({}, sliderConf, {
+	if(window.innerWidth < 1024) {
+		let csd = new Swiper('.nav__slider', Object.assign({}, sliderConf));
+	}
+
+	if(window.innerWidth < 768) {
+    let repairsNavSlider = new Swiper('.repairs__slider', Object.assign({}, sliderConf, {
       pagination: {
         el: '.repairs__pagination',
         clickable: 'true'
       }
     }));
-	}
-  if(window.innerWidth < 651) {
-    let gadjetsNavSlider = new Swiper(gadjetsNav, Object.assign({}, sliderConf, {
+	
+    let gadjetsNavSlider = new Swiper('.gadjets__slider', Object.assign({}, sliderConf, {
       pagination: {
         el: '.gadjets__pagination',
         clickable: 'true'
       }
     }));
-	}
-	if(window.innerWidth < 651) {
-		let pricesNavSlider = new Swiper(pricesNav, Object.assign({}, sliderConf, {
+		
+		let pricesNavSlider = new Swiper('.prices__slider', Object.assign({}, sliderConf, {
       pagination: {
         el: '.prices__pagination',
         clickable: 'true'
@@ -51,8 +49,6 @@ const bindSliders = () => {
     }));
 	}
 }
-
-
 
 
 
@@ -80,20 +76,26 @@ const openListOverflow = (btn, listName, sizeBig, sizeSmall, spanBegin, spanEnd)
 	}
 }
 
-const btnServices = document.querySelector('.btn--services');
-btnServices.addEventListener('click', function(){
-	openListOverflow(btnServices, '.services__text-wrapper', 'auto', '200px', 'Читать далее', 'Свернуть');
-	
-});
-
-const btnRepairs = document.querySelector('.btn-repairs');
+/*const btnRepairs = document.querySelector('.btn-repairs');
 btnRepairs.addEventListener('click', function(){
 	openListOverflow(btnRepairs, '.repairs__list', 'auto', '170px', 'Показать все', 'Свернуть');
 });
-
+*/
 const btnGadjets = document.querySelector('.btn-gadjets');
 btnGadjets.addEventListener('click', function(){
 	openListOverflow(btnGadjets, '.gadjets__list', 'auto', '170px', 'Показать все', 'Свернуть')
+});
+
+
+const btnMoreText = document.querySelector('.btn-moreText');
+btnMoreText.addEventListener('click', function(){
+		let section = document.querySelectorAll('.services__text-wrapper p');
+		for(let i=0; i<section.length;i++){
+			let hide = section[i].getAttribute('data-v');
+			if(hide==='none'){
+			 section[i].classList.toggle('hide');
+			}
+		}
 });
 
 

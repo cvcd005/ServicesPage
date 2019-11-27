@@ -23,12 +23,11 @@ $repairsBorderActive: red;
   }
   &__list-wrap{
     flex-wrap:wrap;
-    /*display:flex;
-    margin-top:25px;
-    align-content:space-around;*/
   }
   &__brands{
-    width:230px;
+    max-width:230px;
+    min-width:210px;
+    width:25%;
     height:72px;
     background: $repairsBgColor;
     border: 1px solid $repairsBorder;
@@ -44,9 +43,4 @@ $repairsBorderActive: red;
   &__brands:focus{
     border:1px solid $repairsBorderActive;
   }
-}
-.swiper-slide{
-  width:25%;
-  max-width:230px;
-  min-width:200px;
 }

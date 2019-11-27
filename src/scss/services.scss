@@ -6,23 +6,21 @@
   }
   &__img{
     float:right;
-    width:50%;
+    width:100%;
     margin-left:15px;
+    margin-bottom:10px;
   }
-
 }
-.services__text-wrapper{
-  height:205px;
-  overflow:hidden;
+@media screen and  (min-width: 768px) {
+  .services{
+    &__img{
+      width:50%;
+    }
+  }
 }
-
 .clearfix::after {
   content: "";
   display: table;
   clear: both;
 }
 
-.btn--services{
-  margin-top:10px;
-  width:150px;
-}

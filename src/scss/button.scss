@@ -6,27 +6,6 @@ $circleColor: #FF3E79;
   cursor:pointer;
   margin:0;
   padding:0;
-  &--moreRead{
-    font-size:16px;
-    line-height: 24px;
-    font-weight:bold;
-    cursor:pointer;
-  }
-  &--elipse{
-    background:$circleColor;
-    color:white;
-    border-radius:16px;
-    display:flex;
-    align-items: center;
-    justify-content: space-around;
-    width:119px;
-    height:32px;
-  }
-  &--order,
-  &--header{
-    font-size: 16px;
-    font-weight: bold;
-  }
 }
 
 .btn-primery{
@@ -76,8 +55,8 @@ $circleColor: #FF3E79;
     background-position:center;
   }
 }
-.btn:hover,
-.btn:focus{
+.btn-primery:hover,
+.btn-primery:focus{
   transition: filter 0.5s ;
   filter:opacity(0.5);
 }
@@ -87,6 +66,28 @@ $circleColor: #FF3E79;
   font-size: 16px;
   line-height: 24px;
 }
+
+.btn-send{
+  background:$circleColor;
+  color:white;
+  border-radius:16px;
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+  width:119px;
+  height:32px;
+}
+.btn-moreText{
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+.btn-showMore{
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+}
+
 .moreRead-icon{
   display:inline-block;
   background-image:url("../img/big.svg");

@@ -26,7 +26,9 @@ $gadjetBorderActive: red;
   }
   &__type{
     height:160px;
-    width:230px;
+    max-width:230px;
+    min-width:210px;
+    width:25%;
     background: $gadjetBg;
     border: 1px solid $gadjetBorderEl;
     border-radius: 6px;
@@ -48,9 +50,4 @@ $gadjetBorderActive: red;
   &__type:focus{
   border:1px solid $gadjetBorderActive;
   }
-}
-.swiper-slide{
-  width:25%;
-  max-width:230px;
-  min-width:200px;
 }
