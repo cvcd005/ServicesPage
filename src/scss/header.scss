@@ -12,10 +12,11 @@ $menuActiveColor: #7E7E82;
   display:none;
   position:absolute;
 	top:0;
- 
+  box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+
   &__header{
     padding-top:20px; 
-    padding-bottom:57px;
+    padding-bottom:38px;
     display:flex;
     justify-content:space-around;
   }
@@ -27,17 +28,14 @@ $menuActiveColor: #7E7E82;
     justify-content:space-between;
   }
 }
-@media screen and (min-width:768px) {
-  .menu{
-    box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
-  }
-}
-
 @media screen and  (min-width: 1024px) {
   .menu{
     display:block;
     box-shadow:none;
     position:relative;
+  }
+  &__header{
+    padding-bottom:57px;
   }
 }
 
@@ -49,7 +47,6 @@ $menuActiveColor: #7E7E82;
   }
 }
 
-
 .m-nav{
   &__list{
     list-style:none;
@@ -58,11 +55,15 @@ $menuActiveColor: #7E7E82;
   }
   &__item{
     padding-left:24px;
-    margin-bottom:32px;
+    margin-bottom:10px;
     cursor:pointer;
   }
 }
-
+@media screen and  (min-width: 769px){
+  .m-nav__item{
+    margin-bottom:32px;
+  }
+}
 .m-contact{
   color:#1B1C21;
   display:flex;
@@ -90,7 +91,7 @@ $menuActiveColor: #7E7E82;
 }
 
 .lang-change{
-  padding-top:40px;
+  padding-top:30px;
   padding-left:24px;
 }
 

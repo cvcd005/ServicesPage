@@ -51,120 +51,128 @@ const bindSliders = () => {
 }
 
 
-
 /*//////////////////////////кнопки читать далее/////////////////////////*/
-const changeButtonStyle = (btn, btnRemove, btnAdd, spanText, divRemove, divAdd) => {
-		btn.classList.remove(btnRemove);
-		btn.classList.add(btnAdd);
-		let span = btn.querySelector('span');
-		span.textContent=spanText;
-		let div = btn.querySelector('div');
-		div.classList.remove(divRemove);
-		div.classList.add(divAdd);
-}
-
-const openListOverflow = (btn, listName, sizeBig, sizeSmall, spanBegin, spanEnd) => {
-	let list = document.querySelector(listName);
-	if(btn.classList.contains('canBig')){
-		list.style.overflow = 'visible';
-		list.style.height = sizeBig;  
-		changeButtonStyle(btn, 'canBig', 'canSmall', spanEnd,  'moreRead-icon', 'smallRead-icon');
-	} else if(btn.classList.contains('canSmall')){
-		list.style.overflow = 'hidden';
-		list.style.height = sizeSmall;  
-		changeButtonStyle(btn, 'canSmall', 'canBig', spanBegin, 'smallRead-icon', 'moreRead-icon');
+const addAction = (list, fn) => {
+	for(let i = 0; i < list.length; i++){
+		fn(list[i]);
 	}
 }
 
-/*const btnRepairs = document.querySelector('.btn-repairs');
-btnRepairs.addEventListener('click', function(){
-	openListOverflow(btnRepairs, '.repairs__list', 'auto', '170px', 'Показать все', 'Свернуть');
-});
-*/
-/*const btnGadjets = document.querySelector('.btn-gadjets');
-btnGadjets.addEventListener('click', function(){
-	openListOverflow(btnGadjets, '.gadjets__list', 'auto', '170px', 'Показать все', 'Свернуть')
-});
-*/
+const changeBtnStyle = (btn, text) => {
+	if(btn.classList.contains('btn-showMore')){
+		btn.classList.remove('btn-showMore');
+		btn.textContent='Свернуть';
+		btn.classList.add('btn-showSmall');
+	}
+	else {
+		btn.classList.remove('btn-showSmall');
+		btn.textContent=text;
+		btn.classList.add('btn-showMore');
+	}
+}
 
-const btnMoreText = document.querySelector('.btn-moreText');
-btnMoreText.addEventListener('click', function(){
-		let section = document.querySelectorAll('.services__text-wrapper p');
-		for(let i=0; i<section.length;i++){
-			let hide = section[i].getAttribute('data-v');
-			if(hide==='none'){
-			 section[i].classList.toggle('hide');
+const showMoreChange = (el) => {
+	let data = el.getAttribute('data-s');
+
+	const f = (sectionName, height) => {
+		let section = document.querySelector(sectionName);
+		let dataz = el.getAttribute('data-z');
+			if(dataz==='1'){
+				section.style.height='auto';
+				el.setAttribute('data-z', '0');
+			} else {
+				section.style.height='170px';
+				el.setAttribute('data-z', '1');
 			}
-		}
-});
+		changeBtnStyle(el, 'Показать все');
+	}
 
 
-const showMoreList = document.querySelector('.btn-showMore');
-showMoreList.addEventListener('click', function(){
-	
-});
+	if(data=='services__text-wrapper'){
+		el.addEventListener('click', function(){
+			let section = document.querySelectorAll('.services__text-wrapper p');
+				for(let i=0; i<section.length;i++){
+					let hide = section[i].getAttribute('data-v');
+					if(hide==='none'){
+					 section[i].classList.toggle('hide');
+					}
+				}
+			changeBtnStyle(el, 'Читать далее');
+		});
+	}
+	if(data=='repairs__list'){
+		el.addEventListener('click', function(){
+			f('.brands__list')
+		});
+	}
+	if(data=='gadjets__list'){
+		el.addEventListener('click', function(){
+			f('.device__list');
+		});
+	}
+}
+
+const showMoreList = document.querySelectorAll('.btn-showMore');
+addAction(showMoreList, showMoreChange);
+
+
+
 
 /*//////////////////////////////////////////////////модалки////////////////////////////////////////////*/
-/*элемент для модалок*/
+
 const overlay = document.querySelector('.overlay');
 
-/*открыть бургер меню*/
-const burgerBtn = document.querySelector('.btn-primery--burger');
-burgerBtn.addEventListener('click', function(){
-	let popup = document.querySelector('.menu');
-	popup.style.display='block';
-	popup.style.zIndex='2';
-	overlay.classList.remove('hide');
-});
-/*Закрыть бургер меню*/
-const closeBtn = document.querySelector('.btn--close-burger');
-closeBtn.addEventListener('click', function(){
-	let popup = document.querySelector('.menu');
-	popup.style.zIndex='0';
-	popup.style.display='none';
-	overlay.classList.add('hide');
-});
-
-
-/*кнопки заказать звонок*/
-const listBtnCall = document.querySelectorAll('.btn-primery--call');
-const listBtnChat = document.querySelectorAll('.btn-primery--chat');
-
-const findAllButton = (list, selectorName) => {
-	for(let i=0,l=list.length;i<l;i++){
-		list[i].addEventListener('click', function(){
-		let popup = document.querySelector(selectorName);
-		popup.classList.remove('hide');
-		overlay.classList.remove('hide');
-		overlay.style.zIndex='3';
-		/*блокируем body для модалок*/
+const openModal = (btn) => {
+	btn.addEventListener('click', function(){
+		let selectorName = btn.getAttribute('data-id');
+		let zIndex = btn.getAttribute('data-z');
+		let popup = document.querySelector('.'+selectorName);
+		popup.style.zIndex = zIndex;
+		popup.style.display = 'block';
+		popup.classList.add('animation-open');
+		overlay.style.display ='block';
+		overlay.style.zIndex = zIndex-1;
 		let container = document.querySelector('.container');
 		container.style.height="100vh";
 		container.style.overflow='hidden';
-		})
+	});
+}
+
+const listBtnCall = document.querySelectorAll('.btn-primery--call');
+const listBtnChat = document.querySelectorAll('.btn-primery--chat');
+const burgerBtn = document.querySelectorAll('.btn-primery--burger');
+
+addAction(listBtnCall, openModal);
+addAction(listBtnChat, openModal);
+addAction(burgerBtn, openModal);
+
+
+const closeModal = (el) => {
+	let modalList = document.querySelectorAll('.modal');
+	let menu = document.querySelectorAll('.menu');
+	let container = document.querySelector('.container');
+
+	const fn = (el) => {
+		el.style.display ='none'; 
 	};
-};
+	addAction(modalList, fn);
+	if(window.innerWidth < 1024) {
+		addAction(menu, fn);
+	}
+	container.style.height="auto";
+	container.style.overflow='visible';
+	overlay.style.display ='none';
+}
 
-findAllButton(listBtnCall, '.modal-phone');
-findAllButton(listBtnChat, '.modal-write');
+const closeList = document.querySelectorAll('.btn-primery--close');
+const overlayList = document.querySelectorAll('.overlay');
 
+addAction(closeList, (el)=>{
+	el.addEventListener('click', closeModal);
+});
 
-/*закрытие модалки звонок и письмо*/
-const closeBtnList = document.querySelectorAll('.btn-primery--close-form');
-for(let i=0,l=closeBtnList.length;i<l;i++){
-	closeBtnList[i].addEventListener('click', function(){
-		let popupPhone = document.querySelector('.modal-phone');
-		let popup = document.querySelector('.modal-write');
-		popupPhone.classList.add('hide');
-		popup.classList.add('hide');
-		overlay.classList.add('hide');
-		overlay.style.zIndex='1';
-		let container = document.querySelector('.container');
-	/////////////////изменить параметр при смене способа раскладки
-		container.style.height="2600px";
-		container.style.overflow='visible';
-	})
-};
+addAction(overlayList, (el)=>{
+	el.addEventListener('click', closeModal);
+});
 
-
-
+//////////////////////////////////////////////////////**********/////////////////////////////// */

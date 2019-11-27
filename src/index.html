@@ -29,8 +29,8 @@
             </nav>
             <div class="m-contact">
               <div class="contact-btn">
-                  <button type="button" class="btn btn-primery btn-primery--call"></button>
-                  <button type="button" class="btn btn-primery btn-primery--chat"></button>
+                  <button type="button" class="btn btn-primery btn-primery--call" data-id="modal--phone" data-z="4"></button>
+                  <button type="button" class="btn btn-primery btn-primery--chat" data-id="modal--write" data-z="4"></button>
                   <button type="button" class="btn btn-primery btn-primery--profile"></button>
               </div>
               <a href="mailto:mail@cps.com" class="m-contact__link ">mail@cps.com</a>
@@ -47,12 +47,12 @@
     <div class="second-part">
     <main class="main">
       <div class="menu-tablet">
-        <button type="button" class="btn btn-primery btn-primery--burger"></button>
+        <button type="button" class="btn btn-primery btn-primery--burger" data-id="menu" data-z="2"></button>
         <div class="menu-tablet__main">
           <img class="logo" src="img/group.svg" alt="Логотип компании CPS">
-          <div class="contact-btn">
-            <button type="button" class="btn btn-primery btn-primery--call"></button>
-            <button type="button" class="btn btn-primery btn-primery--chat"></button>
+          <div class="contact-btn menu-tablet__contact">
+            <button type="button" class="btn btn-primery btn-primery--call" data-id="modal--phone" data-z="4"></button>
+            <button type="button" class="btn btn-primery btn-primery--chat" data-id="modal--write" data-z="4"></button>
             <button type="button" class="btn btn-primery btn-primery--profile"></button>
           </div>
         </div>
@@ -115,8 +115,7 @@
               <p class="hide" data-v="none">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
               </p>
             </div>
-          <button class="btn btn-moreText" data-s="services__text-wrapper"><div class="moreRead-icon"></div><span>Читать далее</span>
-          </button>
+          <button class="btn btn-showMore" data-s="services__text-wrapper" data-size="1">Читать далее</button>
         </div>
       </section>
 
@@ -137,8 +136,7 @@
           </div>
           <div class="repairs__pagination swiper-pagination"></div>
         </div>
-        <button class="btn btn-showMore" data-s="repairs__list"><div class="moreRead-icon"></div><span>Показать все</span>
-        </button>
+        <button class="btn btn-showMore margin-left30" data-s="repairs__list" data-z='1'>Показать все</button>
       </section>
 
       <section class="gadjets">
@@ -154,8 +152,7 @@
           </div>
           <div class="gadjets__pagination swiper-pagination"></div>
         </div>
-        <button class="btn btn-showMore" data-s="gadjets__list"><div class="moreRead-icon"></div><span>Показать все</span>
-        </button>
+        <button class="btn btn-showMore margin-left30" data-s="gadjets__list" data-z='1'>Показать все</button>
       </section>
 
       <section class="prices">
@@ -228,8 +225,8 @@
     </footer>
   </div>
 
-  <div class="overlay hide"></div>
-  <div class="modal modal-write hide">
+  <div class="overlay"></div>
+  <div class="modal modal--write">
     <button type="button" class="btn btn-primery btn-primery--close btn-primery--close-form" dat-id='close-form'>
     </button>
     <h3 class="modal__title">Обратная связь</h3>
@@ -241,11 +238,11 @@
         <textarea placeholder="Cообщение" class="form__input--style form__message">
         </textarea>
         <p class="form__text">Нажимая "отправить", вы даете согласие на <a href="#" class="form__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="form__link">политикой конфиденциальности</a></p>
-        <button type="submit" class="form__submit btn btn--animate btn-send">Отправить<div class="white-arrow"></button>
+        <button type="submit" class="btn btn-send">Отправить<div class="white-arrow"></button>
       </div>
      </form>
   </div>
-  <div class="modal modal-phone hide">
+  <div class="modal modal--phone">
     <button type="button" class="btn btn-primery btn-primery--close btn-primery--close-form">
     </button>
     <h3 class="modal-title">Заказать звонок</h3>
@@ -253,7 +250,7 @@
       <div class="form__wrapper">
         <input type="tel" id="phone" name="phone" placeholder="Телефон" class="form__phone form__input--style">
         <p class="form__text">Нажимая "отправить", вы даете согласие на <a href="#" class="form__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="form__link">политикой конфиденциальности</a></p>
-        <button type="submit" class="form__submit btn btn--animate btn-send">Отправить<div class="white-arrow"></button>
+        <button type="submit" class="btn btn-send">Отправить<div class="white-arrow"></button>
       </div>
     </form>
   </div>

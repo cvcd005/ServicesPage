@@ -4,6 +4,11 @@ $borderInputActive: #B8FFEC;
 $formTextColor: #7E7E82;
 $formLinkColor: #FF3E79;
 
+@keyframes zoom-in {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
 .overlay {
   position:fixed;
   z-index:1;
@@ -16,6 +21,7 @@ $formLinkColor: #FF3E79;
 }
 
 .modal{
+	display:none;
 	width:20%;
 	min-width:320px;
 	height:100%;
@@ -23,6 +29,7 @@ $formLinkColor: #FF3E79;
 	position:fixed;
 	right:0;
 	top:0;
+
 	z-index:3;
 	background: $modalBgColor;
 	padding-left:32px;
@@ -30,7 +37,8 @@ $formLinkColor: #FF3E79;
 	padding-top:32px;
 	box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
 	opacity:1;
-	 
+	transition:top 2s;
+
 	&__title{
 		font-size: 24px;
 		letter-spacing: -0.6px;
@@ -81,3 +89,10 @@ $formLinkColor: #FF3E79;
 		left:-50px;
 	}
 }
+
+.animation-open {
+	animation-duration: 0.6s;
+	animation-name: zoom-in;
+}
+
+
