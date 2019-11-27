@@ -4,27 +4,35 @@ $gadjetBg:#FFFFFF;
 $gadjetBorderActive: red;
 
 .gadjets{
-	margin-bottom:50px;
+  margin-bottom:30px;
+  
   &__header{
     background: linear-gradient(to right, $bgColor 0, #FFFFFF 98%);
     font-size: 16px;
     line-height: 24px;
     text-transform: uppercase;
     color: $gadjetHeaderColor;
-    height:55px;
     padding-left:30px;
-    padding-top:16px;
+    padding-top:10px;
+    padding-bottom:10px;
   }
+}
+@media screen and (min-width: 768px){
+  .gadjets{
+    margin-bottom:50px;
+  }
+}
+
+.device{
+  overflow: hidden;
+  position:relative;
+
   &__list{
     padding-left:14px;
-    height:170px;
-    overflow: hidden;
-    position:relative;
+    height:200px;
+    flex-wrap:nowrap;
   }
-  &__list-wrap{
-    flex-wrap:wrap;
-  }
-  &__type{
+  &__item{
     height:160px;
     max-width:230px;
     min-width:210px;
@@ -39,15 +47,20 @@ $gadjetBorderActive: red;
     padding-left:16px;
     margin-left:16px;
   }
-  &__type-text{
-    font-size: 16px;
-    line-height: 24px;
+  &__item .light-circle{
+	  align-self: flex-end;
   }
-  &__type .light-circle{
-	align-self: flex-end;
-  }
-  &__type:hover,
-  &__type:focus{
-  border:1px solid $gadjetBorderActive;
+}
+
+@media screen and (min-width: 768px){
+  .device{
+    &__list{
+      flex-wrap:wrap;
+      height:170px;
+    }
+    &__item:hover,
+    &__item:focus{
+      border:1px solid $gadjetBorderActive;
+    }
   }
 }

@@ -86,6 +86,13 @@ $circleColor: #FF3E79;
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
+  display:none;
+}
+
+@media screen and (min-width: 768px){
+  .btn-showMore{
+    display:block;
+  }
 }
 
 .moreRead-icon{

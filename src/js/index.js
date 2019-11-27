@@ -81,11 +81,11 @@ btnRepairs.addEventListener('click', function(){
 	openListOverflow(btnRepairs, '.repairs__list', 'auto', '170px', 'Показать все', 'Свернуть');
 });
 */
-const btnGadjets = document.querySelector('.btn-gadjets');
+/*const btnGadjets = document.querySelector('.btn-gadjets');
 btnGadjets.addEventListener('click', function(){
 	openListOverflow(btnGadjets, '.gadjets__list', 'auto', '170px', 'Показать все', 'Свернуть')
 });
-
+*/
 
 const btnMoreText = document.querySelector('.btn-moreText');
 btnMoreText.addEventListener('click', function(){
@@ -98,6 +98,11 @@ btnMoreText.addEventListener('click', function(){
 		}
 });
 
+
+const showMoreList = document.querySelector('.btn-showMore');
+showMoreList.addEventListener('click', function(){
+	
+});
 
 /*//////////////////////////////////////////////////модалки////////////////////////////////////////////*/
 /*элемент для модалок*/

@@ -4,31 +4,39 @@ $repairsBorder: #EAEAEA;
 $repairsBorderActive: red;
 
 .repairs{
-  margin-bottom:50px;
+  margin-bottom:30px;
+  
   &__header{
     background: linear-gradient(to right, #F8F8F8 0, #FFFFFF 98%);
     font-size: 16px;
     line-height: 24px;
     text-transform: uppercase;
     color: $repairsHeaderColor;
-    height:55px;
+    padding-top:10px;
+    padding-bottom:10px;
     padding-left:30px;
-    padding-top:16px;
   }
+}
+@media screen and (min-width: 768px){
+  .repairs{
+    margin-bottom:50px;
+  }
+}
+
+.brands{
+  overflow: hidden;
+  position: relative;
+  
   &__list{
+    flex-wrap:nowrap;
     padding-left:14px;
-    height:170px;
-    overflow: hidden;
-    position:relative;
+    height:110px;
   }
-  &__list-wrap{
-    flex-wrap:wrap;
-  }
-  &__brands{
+  &__item{
     max-width:230px;
     min-width:210px;
     width:25%;
-    height:72px;
+    height:70px;
     background: $repairsBgColor;
     border: 1px solid $repairsBorder;
     border-radius: 6px;
@@ -39,8 +47,18 @@ $repairsBorderActive: red;
     padding-left:16px;
     margin-left:16px;
   }
-  &__brands:hover,
-  &__brands:focus{
-    border:1px solid $repairsBorderActive;
+}
+
+@media screen and (min-width: 768px){
+  .brands{
+    &__list{
+      flex-wrap: wrap;
+      height:170px;
+    }
+    &__item:hover,
+    &__:focus{
+      border:1px solid $repairsBorderActive;
+    }
   }
 }
+

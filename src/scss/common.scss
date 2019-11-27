@@ -52,3 +52,14 @@ a{
       background-color: #B5B6BC;
   }
 }
+@media screen and (min-width: 1024px) { 
+  .swiper-pagination {
+    display: none;
+  }
+}
+
+.text{
+font-size: 16px;
+line-height: 24px;
+font-weight:700;
+}
