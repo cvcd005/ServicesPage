@@ -123,6 +123,14 @@ $circleColor: #FF3E79;
   width:1em;
   height:1em;
 }
+.red-arrow{
+  display:inline-block;
+  background-image:url("../img/arrow.svg");
+  background-repeat: no-repeat;
+  background-position:center;
+  width:10px;
+  height:10px;
+}
 .circle{
   width:40px;
   height:40px;
