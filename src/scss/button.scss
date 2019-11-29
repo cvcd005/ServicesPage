@@ -8,7 +8,7 @@ $circleColor: #FF3E79;
   padding:0;
 }
 
-.btn-primery{
+.btn-primary{
   border-radius:50%;
 	width:40px;
 	height:40px;
@@ -55,17 +55,21 @@ $circleColor: #FF3E79;
     background-position:center;
   }
 }
-.btn-primery:hover,
-.btn-primery:focus{
+.btn-primary:hover,
+.btn-primary:focus{
   transition: filter 0.5s ;
   filter:opacity(0.5);
 }
 
-.btn-text{
+.textButton{
   font-weight: bold;
   font-size: 16px;
   line-height: 24px;
-}
+  position:relative;
+  right:140px;
+  vertical-align:baseline;
+  white-space: nowrap;
+} 
 
 .btn-send{
   background:$circleColor;
@@ -79,41 +83,40 @@ $circleColor: #FF3E79;
 }
 
 .btn-showMore{
+  display:block;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  &:before{
+    content:url("../img/big.svg");
+    display:inline-block;
+    margin-right:10px;
+    width:1em;
+    height:1em;
+    }
+}
+.btn-showMore--desktop{
   display:none;
+  margin-left:30px;
 }
 @media screen and (min-width: 768px){
-  .btn-showMore{
-    display:block;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 24px;
-   &:before{
-      content:url("../img/big.svg");
-      display:inline-block;
-      margin-right:10px;
-      width:1em;
-      height:1em;
-    }
+  .btn-showMore--desktop{
+     display:block;
   }  
 }
 .btn-showSmall{
-  display:none;
-}
-@media screen and (min-width: 768px){
-  .btn-showSmall{
-    display:block;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 24px;
-   &:before{
-      content:url("../img/small.svg");
-      display:inline-block;
-      margin-right:10px;
-      width:1em;
-      height:1em;
-    }
-  }  
-}
+  display:block;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  &:before{
+    content:url("../img/small.svg");
+    display:inline-block;
+    margin-right:10px;
+    width:1em;
+    height:1em;
+  }
+}  
 .white-arrow{
   display:inline-block;
   background-image:url("../img/white-arrow.png");
@@ -161,5 +164,6 @@ $circleColor: #FF3E79;
   background-repeat:no-repeat;
   background-position:center;
 }
-
-
+.margin-right{
+  margin-right:8px;
+}

@@ -4,7 +4,7 @@ $menuActiveColor: #7E7E82;
 
 .menu{
   width:310px;
-  height:auto;
+  height:100vh;
   background:$menuBg;
   font-size: 16px;
   line-height: 24px;
@@ -13,6 +13,8 @@ $menuActiveColor: #7E7E82;
   position:absolute;
 	top:0;
   box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+  padding-left:24px;
+  overflow-y:scroll;
 
   &__header{
     padding-top:20px; 
@@ -28,21 +30,32 @@ $menuActiveColor: #7E7E82;
     justify-content:space-between;
   }
 }
+
+.scroll{
+  height:800px;
+  display:inline-block;
+}
 @media screen and  (min-width: 1024px) {
   .menu{
     display:block;
     box-shadow:none;
     position:relative;
+    height:auto;
+    overflow-y:visible;
   }
   &__header{
     padding-bottom:57px;
   }
+  .scroll{
+    height:100%;
+    
+   }
 }
 
-.btn-primery--close-burger{
+.btn-primary--close-burger{
 }
 @media screen and  (min-width: 769px){
-  .btn-primery--close-burger{
+  .btn-primary--close-burger{
     display:none;
   }
 }
@@ -54,33 +67,27 @@ $menuActiveColor: #7E7E82;
     margin:0;
   }
   &__item{
-    padding-left:24px;
-    margin-bottom:10px;
+    margin-bottom:32px;
     cursor:pointer;
   }
 }
-@media screen and  (min-width: 769px){
-  .m-nav__item{
-    margin-bottom:32px;
-  }
-}
+
 .m-contact{
   color:#1B1C21;
   display:flex;
   flex-direction:column;
-  padding-left:24px;
-  
+    
   &__phone{
     font-size: 24px;
     line-height: 32px;
     letter-spacing: -0.6px;
     font-weight:bold;
-    margin-top:12px;
     text-decoration: none;
     color:$textColor;
   }
   &__link{
-    margin-top:16px;
+    padding-top:16px;
+    padding-bottom:12px;
   }
 }  
 
@@ -91,8 +98,6 @@ $menuActiveColor: #7E7E82;
 }
 
 .lang-change{
-  padding-top:30px;
-  padding-left:24px;
 }
 
 .logo{
@@ -102,8 +107,10 @@ $menuActiveColor: #7E7E82;
 }
 
 .active-border{
-  border-left:4px solid $menuBorder;
   color: $menuActiveColor;
+  box-shadow: 
+  -16px 0 0 4px $menuBg,
+  -20px 0 0 4px $menuBorder;
 }
 .active{
   color: $menuActiveColor;

@@ -5,8 +5,8 @@ $formTextColor: #7E7E82;
 $formLinkColor: #FF3E79;
 
 @keyframes zoom-in {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
+    from {transform:translateX(-500px)} 
+    to {transform:translateX(0)}
 }
 
 .overlay {
@@ -17,35 +17,49 @@ $formLinkColor: #FF3E79;
   top:0;
   width:100vw;
   height:100vh;
- opacity:0.9;
+	display:none;
+}
+
+@media screen and (min-width: 1024px) { 
+  .overlay {
+    opacity: 0.9;
+  }
 }
 
 .modal{
 	display:none;
-	width:20%;
-	min-width:320px;
-	height:100%;
-	min-height:640px;
+	width:320px;
 	position:fixed;
 	right:0;
 	top:0;
-
 	z-index:3;
 	background: $modalBgColor;
-	padding-left:32px;
-	padding-right:32px;
-	padding-top:32px;
 	box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
 	opacity:1;
-	transition:top 2s;
-
+	
 	&__title{
 		font-size: 24px;
 		letter-spacing: -0.6px;
 	}
 }
 
-
+.scroll-wrapper{
+	overflow-y: scroll;
+	width:320px;
+	height:100vh;
+	width:100%;
+	padding-left:32px;
+	padding-right:32px;
+	padding-top:32px;
+}
+@media screen and (min-width: 1024px) { 
+  .scroll-wrapper{
+		overflow-y:visible;
+	}
+}
+.scroll{
+	width:auto;
+}
 
 
 .form{
@@ -78,13 +92,14 @@ $formLinkColor: #FF3E79;
 	}
 }
 
-.btn-primery--close-form{
+.btn-primary--close-form{
 	position:relative;
+	top:10px;
 	right:1px;
 }
 
 @media screen and  (min-width: 321px){
-	.btn-primery--close-form{
+	.btn-primary--close-form{
 		position:absolute;
 		left:-50px;
 	}

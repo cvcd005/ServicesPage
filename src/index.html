@@ -9,65 +9,67 @@
   <body class="container">
      
     <div class="menu">
+      <div class="scroll">
           <div class="menu__header">
-            <button type="button" class="btn btn-primery btn-primery--close btn-primery--close-burger"></button>
-            <img class="logo" src="img/group.svg" alt="Логотип компании CPS">
-            <button type="button" class="btn btn-primery btn-primery--find"></button>
+            <button type="button" class="btn btn-primary btn-primary--close btn-primary--close-burger"></button>
+            <a href="#"><img class="logo" src="img/group.svg" alt="Логотип компании CPS"></a>
+            <button type="button" class="btn btn-primary btn-primary--find"></button>
           </div>
           <div class="menu__wrapper">
             <nav class="m-nav">
               <ul class="m-nav__list">
-                <li class="m-nav__item">Ремонт техники</li>
-                <li class="m-nav__item active-border">Услуги и сервисы</li>
-                <li class="m-nav__item">Корпоративным клиентам</li>
-                <li class="m-nav__item">Продавцам техники</li>
-                <li class="m-nav__item">Партнерам</li>
-                <li class="m-nav__item">Производителям</li>
-                <li class="m-nav__item">Наши сервисные центры</li>
-                <li class="m-nav__item">Контакты</li>
+                <li class="m-nav__item"><a href="#">Ремонт техники</a></li>
+                <li class="m-nav__item active-border"><a href="#">Услуги и сервисы</a></li>
+                <li class="m-nav__item"><a href="#">Корпоративным клиентам</a></li>
+                <li class="m-nav__item"><a href="#">Продавцам техники</a></li>
+                <li class="m-nav__item"><a href="#">Партнерам</a></li>
+                <li class="m-nav__item"><a href="#">Производителям</a></li>
+                <li class="m-nav__item"><a href="#">Наши сервисные центры</a></li>
+                <li class="m-nav__item"><a href="#">Контакты</a></li>
               </ul>
             </nav>
             <div class="m-contact">
               <div class="contact-btn">
-                  <button type="button" class="btn btn-primery btn-primery--call" data-id="modal--phone" data-z="4"></button>
-                  <button type="button" class="btn btn-primery btn-primery--chat" data-id="modal--write" data-z="4"></button>
-                  <button type="button" class="btn btn-primery btn-primery--profile"></button>
+                  <button type="button" class="btn btn-primary btn-primary--call" data-id="modal--phone" data-z="4"></button>
+                  <button type="button" class="btn btn-primary btn-primary--chat" data-id="modal--write" data-z="4"></button>
+                  <button type="button" class="btn btn-primary btn-primary--profile"></button>
               </div>
               <a href="mailto:mail@cps.com" class="m-contact__link ">mail@cps.com</a>
               <a href="tel:+78008908900" class="m-contact__phone">8 800 890 8900</a>
             </div>
+            <div class="lang-change">
+                <button type="button" class="btn btnRu active">RU</button>
+                <button type="button" class="btn btnEn">EN</button>
+                <button type="button" class="btn btnCH">CH</button>
+            </div>
           </div>
-          <div class="lang-change">
-            <button type="button" class="btn btnRu active">RU</button>
-            <button type="button" class="btn btnEn">EN</button>
-            <button type="button" class="btn btnCH">CH</button>
-          </div>
+        </div>
     </div>    
       
     <div class="page">
     <main class="main">
       <div class="menu-tablet">
-        <button type="button" class="btn btn-primery btn-primery--burger" data-id="menu" data-z="2"></button>
+        <button type="button" class="btn btn-primary btn-primary--burger" data-id="menu" data-z="2"></button>
         <div class="menu-tablet__main">
-          <img class="logo" src="img/group.svg" alt="Логотип компании CPS">
+          <a href="#"><img class="logo" src="img/group.svg" alt="Логотип компании CPS"></a>
           <div class="contact-btn menu-tablet__contact">
-            <button type="button" class="btn btn-primery btn-primery--call" data-id="modal--phone" data-z="4"></button>
-            <button type="button" class="btn btn-primery btn-primery--chat" data-id="modal--write" data-z="4"></button>
-            <button type="button" class="btn btn-primery btn-primery--profile"></button>
+            <button type="button" class="btn btn-primary btn-primary--call" data-id="modal--phone" data-z="4"></button>
+            <button type="button" class="btn btn-primary btn-primary--chat" data-id="modal--write" data-z="4"></button>
+            <button type="button" class="btn btn-primary btn-primary--profile"></button>
           </div>
         </div>
         <div class="menu-tablet__btn">
-            <button type="button" class="btn btn-primery btn-primery--order margin-right"></button>
-            <button type="button" class="btn btn-primery btn-primery--status"></button>
+            <button type="button" class="btn btn-primary btn-primary--order margin-right"></button>
+            <button type="button" class="btn btn-primary btn-primary--status"></button>
         </div>
       </div>
 
       <header class="header-page">
         <h1 class="header-page__title">Услуги и сервисы</h1>
         <div class="header-page__btn">
-          <button type="button" class="btn btn-text">Оставить заявку<div class="circle order-icon margin-left"></div>
-          </button>
-          <button type="button" class="btn btn-text">Статус ремонта<div class="circle status-icon margin-left"></div></button>
+          <button type="button" class="btn btn-primary btn-primary--order margin-right"><span class="textButton">Оставить заявку</span></button>
+          <button type="button" class="btn btn-primary btn-primary--status"><span class="textButton">Статус ремонта</span></button>
+          
         </div>
       </header>
 
@@ -136,7 +138,7 @@
           </div>
           <div class="repairs__pagination swiper-pagination"></div>
         </div>
-        <button class="btn btn-showMore margin-left30" data-s="repairs__list" data-z='1'>Показать все</button>
+        <button class="btn btn-showMore btn-showMore--desktop" data-s="repairs__list" data-z='1'>Показать все</button>
       </section>
 
       <section class="gadjets">
@@ -152,7 +154,7 @@
           </div>
           <div class="gadjets__pagination swiper-pagination"></div>
         </div>
-        <button class="btn btn-showMore margin-left30" data-s="gadjets__list" data-z='1'>Показать все</button>
+        <button class="btn btn-showMore btn-showMore--desktop" data-s="gadjets__list" data-z='1'>Показать все</button>
       </section>
 
       <section class="prices">
@@ -226,11 +228,15 @@
   </div>
 
   <div class="overlay"></div>
+  
   <div class="modal modal--write">
-    <button type="button" class="btn btn-primery btn-primery--close btn-primery--close-form" dat-id='close-form'>
-    </button>
-    <h3 class="modal__title">Обратная связь</h3>
-    <form class="form">
+      <div class="scroll-wrapper">
+        <button type="button" class="btn btn-primary btn-primary--close btn-primary--close-form" dat-id='close-form'>
+          </button>
+      <div class="scroll">
+      <h3 class="modal__title">Обратная связь</h3>
+      <form class="form">
+        
       <div class="form__wrapper">
         <input type="text" name="name" placeholder="Имя" class="form__name form__input--style ">
         <input type="tel" id="phone" name="phone" placeholder="Телефон" class="form__phone form__input--style">
@@ -239,21 +245,28 @@
         </textarea>
         <p class="form__text">Нажимая "отправить", вы даете согласие на <a href="#" class="form__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="form__link">политикой конфиденциальности</a></p>
         <button type="submit" class="btn btn-send">Отправить<div class="white-arrow"></button>
-      </div>
+      
+    
      </form>
+     </div>
   </div>
-  <div class="modal modal--phone">
-    <button type="button" class="btn btn-primery btn-primery--close btn-primery--close-form">
-    </button>
-    <h3 class="modal-title">Заказать звонок</h3>
-    <form class="form">
-      <div class="form__wrapper">
-        <input type="tel" id="phone" name="phone" placeholder="Телефон" class="form__phone form__input--style">
-        <p class="form__text">Нажимая "отправить", вы даете согласие на <a href="#" class="form__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="form__link">политикой конфиденциальности</a></p>
-        <button type="submit" class="btn btn-send">Отправить<div class="white-arrow"></button>
-      </div>
-    </form>
-  </div>
+</div>
 
+  <div class="modal modal--phone">
+    <div class="scroll-wrapper">
+      <button type="button" class="btn btn-primary btn-primary--close btn-primary--close-form">
+      </button>
+      <div class="scroll">
+        <h3 class="modal-title">Заказать звонок</h3>
+        <form class="form">
+          <div class="form__wrapper">
+            <input type="tel" id="phone" name="phone" placeholder="Телефон" class="form__phone form__input--style">
+            <p class="form__text">Нажимая "отправить", вы даете согласие на <a href="#" class="form__link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="form__link">политикой конфиденциальности</a></p>
+            <button type="submit" class="btn btn-send">Отправить<div class="white-arrow"></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
   </body>
 </html>

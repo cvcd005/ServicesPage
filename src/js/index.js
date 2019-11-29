@@ -133,14 +133,13 @@ const openModal = (btn) => {
 		overlay.style.display ='block';
 		overlay.style.zIndex = zIndex-1;
 		let container = document.querySelector('.container');
-		container.style.height="100vh";
 		container.style.overflow='hidden';
 	});
 }
 
-const listBtnCall = document.querySelectorAll('.btn-primery--call');
-const listBtnChat = document.querySelectorAll('.btn-primery--chat');
-const burgerBtn = document.querySelectorAll('.btn-primery--burger');
+const listBtnCall = document.querySelectorAll('.btn-primary--call');
+const listBtnChat = document.querySelectorAll('.btn-primary--chat');
+const burgerBtn = document.querySelectorAll('.btn-primary--burger');
 
 addAction(listBtnCall, openModal);
 addAction(listBtnChat, openModal);
@@ -164,7 +163,7 @@ const closeModal = (el) => {
 	overlay.style.display ='none';
 }
 
-const closeList = document.querySelectorAll('.btn-primery--close');
+const closeList = document.querySelectorAll('.btn-primary--close');
 const overlayList = document.querySelectorAll('.overlay');
 
 addAction(closeList, (el)=>{
